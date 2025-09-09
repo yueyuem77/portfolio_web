@@ -1,0 +1,97 @@
+{
+  "title": {
+    "media": {
+      "url": "",
+      "caption": " <a target=\"_blank\" href=''>credits</a>",
+      "credit": ""
+    },
+    "text": {
+      "headline": "Data Science Journey<br>Timeline",
+      "text": "<p>My professional and academic journey in Data Science</p>"
+    }
+  },
+  "scale": "human",
+  "color": {
+    "work": "#FF6B6B",
+    "education": "#4ECDC4", 
+    "project": "#45B7D1"
+  },
+  "events": [
+    {
+      "start_date": {"year": "2021", "month": "5"},
+      "end_date": {"year": "2021", "month": "9"},
+      "category": "work",
+      "media": {
+        "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3wzpw3HnEPUEN-H4XJ2g5x_4w0aMCiPcYzA&usqp=CAU",
+        "credit": "SF Technology"
+      },
+      "text": {
+        "headline": "ML Engineer Intern at SF Technology",
+        "text": "Enhanced warehouse automation by refining object detection models with TensorFlow and augmenting edge-case images using OpenCV, reducing misclassifications by 10%."
+      }
+    },
+    {
+      "start_date": {"year": "2022", "month": "9"},
+      "end_date": {"year": "2024", "month": "5"},
+      "category": "education",
+      "media": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Columbia_University_Logo.svg/1200px-Columbia_University_Logo.svg.png",
+        "credit": "Columbia University"
+      },
+      "text": {
+        "headline": "MS in Data Science - Columbia University",
+        "text": "Master's degree in Data Science focusing on machine learning, statistical modeling, and data visualization techniques."
+      }
+    },
+    {
+      "start_date": {"year": "2023", "month": "4"},
+      "end_date": {"year": "2024", "month": "8"},
+      "category": "work",
+      "media": {
+        "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3wzpw3HnEPUEN-H4XJ2g5x_4w0aMCiPcYzA&usqp=CAU",
+        "credit": "ADEL"
+      },
+      "text": {
+        "headline": "Business Intelligence Analyst at ADEL",
+        "text": "Built forecasting models using XGBoost to analyze financial trends and regional demand signals, supporting improved inventory planning across Southeast Asia."
+      }
+    },
+    {
+      "start_date": {"year": "2023", "month": "10"},
+      "category": "project",
+      "media": {
+        "url": "https://miro.medium.com/max/1000/1*d6tqQqSjxBQ8kvcWjLjm8w.png",
+        "credit": "NYT Project"
+      },
+      "text": {
+        "headline": "NBERT-Powered News Sentiment Explorer",
+        "text": "Sentiment Analysis of New York Times Articles using advanced NLP techniques and machine learning models."
+      }
+    },
+    {
+      "start_date": {"year": "2023", "month": "11"},
+      "category": "project",
+      "media": {
+        "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_9io7Zmn_xunW5wZynIwqHOufi9Rh51pcxQ&usqp=CAU",
+        "credit": "R Shiny"
+      },
+      "text": {
+        "headline": "R Shiny Wildlife Habitat Dashboard",
+        "text": "Interactive Wildlife Habitat Dataviz Dashboard built with R Shiny for data exploration and visualization."
+      }
+    },
+    {
+      "start_date": {"year": "2024", "month": "9"},
+      "end_date": {"year": "2025", "month": "5"},
+      "category": "work",
+      "media": {
+        "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3wzpw3HnEPUEN-H4XJ2g5x_4w0aMCiPcYzA&usqp=CAU",
+        "credit": "GradeMate"
+      },
+      "text": {
+        "headline": "Data Scientist Lead at GradeMate",
+        "text": "Leading ML model deployment with LLaMA 3 and Python to automate grading workflows, reducing manual variance and increasing efficiency for educators."
+      }
+    }
+  ]
+}

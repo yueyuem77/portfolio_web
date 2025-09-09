@@ -1,6 +1,7 @@
 from pathlib import Path
 
 import streamlit as st
+from streamlit_timeline import timeline
 from PIL import Image
 
 import os
@@ -32,7 +33,7 @@ PROJECTS = {
 }
 
 
-st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
+st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON, layout="wide")
 
 
 # --- LOAD CSS, PDF & PROFIL PIC ---
@@ -155,3 +156,14 @@ st.subheader("Projects & Accomplishments")
 st.write("---")
 for project, link in PROJECTS.items():
     st.write(f"[{project}]({link})")
+
+# --- Timeline ---
+st.write('\n')
+st.subheader("DS TIMELINE")
+st.write("---")
+
+with st.spinner(text="Building line"):
+    with open('timeline.json', "r") as f:
+        data = f.read()
+
+    timeline(data, height=500)
