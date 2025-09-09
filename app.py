@@ -35,10 +35,52 @@ PROJECTS = {
 
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON, layout="wide")
 
+# Initialize dark mode in session state
+if 'dark_mode' not in st.session_state:
+    st.session_state.dark_mode = False
+
+
+# --- DARK MODE TOGGLE ---
+with st.sidebar:
+    st.markdown("### Theme Settings")
+    dark_mode = st.toggle("🌙 Dark Mode", value=st.session_state.dark_mode)
+    if dark_mode != st.session_state.dark_mode:
+        st.session_state.dark_mode = dark_mode
+        st.rerun()
 
 # --- LOAD CSS, PDF & PROFIL PIC ---
 with open(css_file) as f:
-    st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
+    css_content = f.read()
+    
+# Add dynamic dark mode CSS
+dark_mode_css = f"""
+<style>
+{css_content}
+/* Dynamic dark mode styles */
+.stApp {{
+    background-color: {'#0e1117' if st.session_state.dark_mode else '#ffffff'};
+    color: {'#fafafa' if st.session_state.dark_mode else '#262730'};
+}}
+
+.stSidebar {{
+    background-color: {'#1e1e1e' if st.session_state.dark_mode else '#f0f2f6'};
+}}
+
+.stMarkdown, .stText {{
+    color: {'#fafafa' if st.session_state.dark_mode else '#262730'};
+}}
+
+.stSubheader {{
+    color: {'#fafafa' if st.session_state.dark_mode else '#262730'};
+}}
+
+.stTitle {{
+    color: {'#fafafa' if st.session_state.dark_mode else '#262730'};
+}}
+</style>
+"""
+
+st.markdown(dark_mode_css, unsafe_allow_html=True)
 
 if os.path.exists(resume_file):
     with open(resume_file, "rb") as pdf_file:
